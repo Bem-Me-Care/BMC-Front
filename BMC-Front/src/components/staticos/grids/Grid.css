@@ -1,0 +1,20 @@
+.imggrid {
+    width: 250px;
+    height: 250px;
+    zoom: 1;
+    border-radius: 30px;
+    border: 8px solid #fef9b5;
+    box-shadow: 0 0 2px #000;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+    background-color: #fef9b5;
+}
+
+.imggrid:hover {
+    border: 8px solid #c75f77;
+    box-shadow: 0 0 2px #000;
+    background-color: #f9f9f9;
+}
+
+
+

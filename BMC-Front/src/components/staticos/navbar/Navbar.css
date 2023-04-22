@@ -1,0 +1,40 @@
+
+:root{
+    --color-OffWhite: #EBEAE5;
+    --color-Yellow: #fefab6;
+    --color-Blue: #77a493;
+    --color-Pink: #c75f77;
+    --color-Purple: #836177;
+    --color-Brown: #654b49;
+    --color-Black: #000000;
+}
+
+
+.cursor{
+    cursor: pointer;
+    color: #fefab6;
+}
+
+.btn-legal{
+    padding: 0 10px;
+}
+
+.btn-legal:hover{
+    border-bottom:2px solid #d761c1aa !important;
+    transition: 1.5s;
+}
+
+.img-logo{
+    margin-top: 5px ;
+    height: 80px;
+    justify-content: start;
+}
+
+.caixaLogo{
+    display: flex;
+    float: left;
+    align-items: center;
+    font-size: 50px;
+    /*Fonte temporaria*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

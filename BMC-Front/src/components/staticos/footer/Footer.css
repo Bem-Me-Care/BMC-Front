@@ -1,0 +1,26 @@
+
+:root{
+    --color-OffWhite: #EBEAE5;
+    --color-Yellow: #fefab6;
+    --color-Blue: #77a493;
+    --color-Pink: #c75f77;
+    --color-Purple: #836177;
+    --color-Brown: #654b49;
+    --color-Black: #000000;
+}
+
+
+.imgOds{
+    width: 30%;
+    border-radius: 10px;
+}
+
+
+.caixaLogo2{
+    display: flex;
+    float: left;
+    align-items: center;
+    font-size: 50px;
+    /*Fonte temporaria*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
