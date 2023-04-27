@@ -112,23 +112,17 @@ function CadastroProduto() {
 
   return (
     <>
-        <Box sx={{ flexGrow: 1 }}>
+        <Box  margin={2}  bgcolor="background.paper" sx={{ maxWidth: 300, margin: 'auto', padding: 2 }}>
+        
             <Grid container spacing={2}>
-                <Grid item xs={12} className="nomeProduto">
+                <Grid className="nomeProduto">
                     <Typography variant="h3" component="h1" align="center" className="textoCP">
                         {produto.id !== 0 ? 'Editar produto' : 'Cadastrar produto'}
                     </Typography>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid>
           <form onSubmit={onSubmit}>
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    '& .MuiTextField-root': { m: 1, width: '25ch' },
-                }}
-            >
+            <Box>
 
             <TextField
               value={produto.nome}
