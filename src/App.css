@@ -1,0 +1,42 @@
+:root{
+    --color-OffWhite: #EBEAE5;
+    --color-Yellow: #fefab6;
+    --color-Blue: #77a493;
+    --color-Pink: #c75f77;
+    --color-Purple: #836177;
+    --color-Brown: #654b49;
+    --color-Black: #000000;
+}
+
+
+
+a.link {
+    color: #EBEAE5 !important;
+}
+
+input[type="text"] {
+    background-color: #ffffff;
+    border: wheat;
+    border-radius: 0;
+    border-bottom: 1px solid #f3f0f2;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    color: #141113
+}
+    input:hover {
+        background-color: #ffffff;
+        border: #c75f77 1px solid;
+        border-radius: 0;
+        border-bottom: 1px solid #f3f0f2;
+        outline: none;
+        height: 50px;
+        width: 100%;
+        font-size: 16px;
+        padding: 0 10px;
+        color: #141113
+    
+  
+}

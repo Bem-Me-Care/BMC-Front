@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+:root{
+  --color-OffWhite: #EBEAE5;
+  --color-Yellow: #fefab6;
+  --color-Blue: #77a493;
+  --color-Pink: #c75f77;
+  --color-Purple: #836177;
+  --color-Brown: #654b49;
+  --color-Black: #000000;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+Button {
+  color: var(--color-Yellow) !important;
+  background-color: var(--color-Pink) !important;
+  border-color: var(--color-Brown) !important;
+  margin-left: 3px !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+Button:hover {
+  color: var(--color-Yellow) !important;
+  background-color: var(--color-Blue) !important;
+  border-bottom-color: var(--color-Black) !important;
+  box-shadow: 0 0 10px 0 !important;
+}
+
+a{
+  color: var(--color-Purple) !important;
+}
+

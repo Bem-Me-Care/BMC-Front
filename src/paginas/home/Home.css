@@ -1,0 +1,57 @@
+
+:root{
+  --color-OffWhite: #EBEAE5;
+  --color-Yellow: #fefab6;
+  --color-Blue: #77a493;
+  --color-Pink: #c75f77;
+  --color-Purple: #836177;
+  --color-Brown: #654b49;
+  --color-Black: #000000;
+}
+
+
+.caixa {
+  background-color: #EBEAE5;
+}
+
+.titulo-bem-vindo {
+  color: #c75f77 !important;
+  font-weight: bold !important;
+  padding-top: 3rem;
+}
+
+.sub-titulo {
+  font-size: 30px !important;
+  color: #77a493;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.botaoHome {
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.botaoHome button {
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #836177;
+  color: #ffffff;
+  margin-bottom: 8px;
+
+}
+
+.botaoHome button:hover {
+  justify-content: center;
+  color: #ffffff;
+  background-color: #77a493;
+}
+
+.postagens {
+  background-color: white;
+}
+
+.imgHome {
+  border-radius: 50%
+}

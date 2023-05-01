@@ -1,0 +1,53 @@
+:root{
+    --color-OffWhite: #EBEAE5;
+    --color-Yellow: #fefab6;
+    --color-Blue: #77a493;
+    --color-Pink: #c75f77;
+    --color-Purple: #836177;
+    --color-Brown: #654b49;
+    --color-Black: #000000;
+}
+
+
+
+.bkf{
+    background-color: var(--color-Pink) !important;
+}
+
+
+
+
+.imgPP{
+    /* margin-top: 15vh; */
+    margin-left: 1vh ;
+}
+
+
+.p0{
+    /* margin-right: 2% !important; */
+    border-bottom: var(--color-Yellow) 1px solid !important;
+    height: 2px;
+}
+
+.p1{
+    margin-bottom: 50px !important;
+}
+
+.ods-t{
+    color: var(--color-Yellow);
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+
+.icon-f{
+    margin-top: 1vh;
+    color: var(--color-Yellow);
+}
+
+
+
+
+.m0{
+    margin-right: 25px;
+}

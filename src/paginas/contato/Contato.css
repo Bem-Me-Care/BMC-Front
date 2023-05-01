@@ -1,0 +1,70 @@
+:root {
+  --color-OffWhite: #ebeae5;
+  --color-Yellow: #fefab6;
+  --color-Blue: #77a493;
+  --color-Pink: #c75f77;
+  --color-Purple: #836177;
+  --color-Brown: #654b49;
+  --color-Black: #000000;
+}
+
+.caixaContato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: var(--color-OffWhite);
+}
+
+.titulo1 {
+  color: #836177 !important;
+  font-weight: bold !important;
+  font-size: 30px !important;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.texto1 {
+  font-size: 22px !important;
+  color: #77a493;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.texto2 {
+  font-size: 24px !important;
+  color: #c75f77;
+  font-weight: bold !important;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.btnContato {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.btnContato button {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #836177;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.btnContato button:hover {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #77a493;
+}
