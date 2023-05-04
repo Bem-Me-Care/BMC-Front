@@ -125,7 +125,7 @@ function ResponsiveAppBar() {
             component="a"
             sx={{
               mr: 2,
-              display: { xs: "flex", md: "flex" },
+              display: { xs: "", md: "flex" },
               flexGrow: 1,
               fontFamily: "sans-serif",
               fontWeight: 700,
