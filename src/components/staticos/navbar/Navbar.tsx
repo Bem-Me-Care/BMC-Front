@@ -24,6 +24,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
 import { addToken } from "../../../store/tokens/actions";
+import User from "../../../models/User";
+import { getById } from "../../../services/Service";
 
 const pages = ["Home", "Sobre", "Contato", "Produtos", "Sobre", "Cadastro"];
 
@@ -36,7 +38,10 @@ const pageslinks = [
   "/cadastro",
 ];
 
-const settings = [{ name: "Perfil", href: "/perfil/:id" }, { name: "Logout", href: '' }];
+const settings = [
+  { name: "Perfil", href: "/perfil/:id" },
+  { name: "Logout", href: "" },
+];
 
 function ResponsiveAppBar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -50,6 +55,7 @@ function ResponsiveAppBar() {
   function goLogout() {
     dispatch(addToken(""));
     toast.info("Usuário deslogado");
+    setUsuario;
   }
 
   console.log(log);
@@ -71,6 +77,31 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  const userId = useSelector<TokenState, TokenState["id"]>((state) => state.id);
+
+  const [usuario, setUsuario] = useState<User>({
+    id: +userId,
+    nome: "",
+    usuario: "",
+    foto: "",
+    senha: "",
+  });
+
+  console.log(usuario);
+
+  async function getUsuarioById(id: string) {
+    await getById(`/usuarios/${id}`, setUsuario, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
+  useEffect(() => {
+    getUsuarioById(userId);
+  }, [userId]);
+
+  console.log(usuario);
   return (
     <AppBar position="static" style={{ backgroundColor: "#c75f77" }}>
       <Container maxWidth="xl">
@@ -82,9 +113,9 @@ function ResponsiveAppBar() {
             }}
           >
             <img
-              src="https://avatars.githubusercontent.com/u/129092790?s=96&v=4"
+              src={"https://avatars.githubusercontent.com/u/129092790?s=96&v=4"}
               alt="Logo da marca BMC"
-              style={{ width: "70px", padding: "10px" }}
+              style={{ width: "70px", padding: "10px", marginLeft: '2vw' }}
             />
           </Box>
 
@@ -92,7 +123,6 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "flex" },
@@ -115,16 +145,23 @@ function ResponsiveAppBar() {
                 alignContent: "center",
                 alignItems: "center",
                 justifyItems: "center",
+                marginRight: '1vw',
               }}
             >
               {token !== "" ? (
                 <Tooltip title={""}>
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar
-                      alt="Remy Sharp"
-                      src="/static/images/avatar/2.jpg"
-                    />
-                  </IconButton>
+                  <>
+                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0}}>
+                      <Avatar
+                        alt="Perfil"
+                        src={usuario.foto}
+                        style={{
+                          width: "45px",
+                          height: "45px",
+                        }}
+                      />
+                    </IconButton>
+                  </>
                 </Tooltip>
               ) : (
                 <Box
@@ -151,10 +188,7 @@ function ResponsiveAppBar() {
                     flexItem
                   />
 
-                  <Link
-                    to={"/cadastro"}
-                    className="link"
-                  >
+                  <Link to={"/cadastro"} className="link">
                     <Typography className="text-color">Cadastro</Typography>
                   </Link>
                 </Box>
@@ -181,14 +215,11 @@ function ResponsiveAppBar() {
                 {settings.map((setting) => (
                   <ListItem key={setting.name}>
                     {setting.name === "Logout" ? (
-                      <Link
-                        onClick={goLogout} to={""} >
+                      <Link onClick={goLogout} to={""}>
                         {setting.name}
                       </Link>
                     ) : (
-                      <Link to={setting.href}>
-                        {setting.name}
-                      </Link>
+                      <Link to={setting.href}>{setting.name}</Link>
                     )}
                   </ListItem>
                 ))}
