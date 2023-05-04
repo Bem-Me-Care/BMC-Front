@@ -146,7 +146,7 @@ function ResponsiveAppBar() {
                 alignContent: "center",
                 alignItems: "center",
                 justifyItems: "center",
-                marginRight: '3vw'
+                marginRight: '1vw',
               }}
             >
               {token !== "" ? (
