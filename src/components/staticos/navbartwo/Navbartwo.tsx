@@ -67,7 +67,7 @@ export default function Navbartwo() {
             sx={{
               justifyContent: "center",
               flexGrow: 1,
-              display: { sm: "flex", md: "none" },
+              display: { xs: "flex", md: "none" },
             }}
           >
             <IconButton
@@ -124,7 +124,7 @@ export default function Navbartwo() {
             sx={{
               justifyContent: "center",
               flexGrow: 1,
-              display: { sm: "none", md: "flex" },
+              display: { xs: "none", md: "flex" },
             }}
           >
             {pagesLinksTwo.map((item) => (

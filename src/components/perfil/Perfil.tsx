@@ -23,7 +23,7 @@ function Perfil() {
   });
 
   async function getUserById(id: number) {
-    await getById(`/user/${id}`, setUsuario, {
+    await getById(`/usuarios/${id}`, setUsuario, {
       headers: {
         Authorization: token,
       },
@@ -38,7 +38,7 @@ function Perfil() {
     <>
       <div className="cont">
         <div className="perfilFoto">
-          <img src='https://github.com/Kaluribr.png' alt="" />
+          <img src={usuario.foto} alt='' className='perfilFoto' />
           <Typography>{usuario.nome}</Typography>
         </div>
         <div className="perfilDados">

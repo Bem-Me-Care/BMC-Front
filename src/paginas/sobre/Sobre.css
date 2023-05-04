@@ -9,7 +9,48 @@
 }
 
 .container {
+<<<<<<< HEAD
+    background-color: var(--color-Pink);
+    /* display: flex; */
+
+}
+
+.titulo {
+    color: var(--color-Yellow) !important;
+    font-weight: "bold" !important;
+    text-align: justify;
+    font-size: 2vw !important;
+}
+.texto {
+    color: var(--color-OffWhite) !important;
+    font-weight: "bold" !important;
+    font-size: 2vw !important;
+}
+
+.fotoSobre {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+}
+.containerCards{
+    padding: 20px;
+    justify-content: space-around;
+    background-color: var(--color-OffWhite);
+    width: 100vh;
+}
+
+.cards{
+    justify-content: start;
+    padding: 10px;
+}
+
+.textoCard{
+    color: var(--color-Brown) !important;
+    font-weight: "bold" !important;
+    font-size: 20px;
+=======
   background-color: var(--color-Pink);
+>>>>>>> 82d0233518b8329080a4df6742fc13c4cd951e56
 }
 
 .tituloSobre {
