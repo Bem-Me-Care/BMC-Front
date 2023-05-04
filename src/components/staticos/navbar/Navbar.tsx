@@ -115,7 +115,7 @@ function ResponsiveAppBar() {
             <img
               src={"https://avatars.githubusercontent.com/u/129092790?s=96&v=4"}
               alt="Logo da marca BMC"
-              style={{ width: "70px", padding: "10px", marginLeft: '2vw' }}
+              style={{ width: "70px", padding: "10px", marginLeft: '2px' }}
             />
           </Box>
 
@@ -145,7 +145,7 @@ function ResponsiveAppBar() {
                 alignContent: "center",
                 alignItems: "center",
                 justifyItems: "center",
-                marginRight: '1vw',
+                marginRight: '1px',
               }}
             >
               {token !== "" ? (
