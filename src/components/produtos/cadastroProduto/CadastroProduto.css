@@ -1,3 +1,9 @@
+
+.fundoCadProd {
+  background-color: #ebeae5;
+  height: 100vh;
+}
+
 .formularioCategoria {
   width: 35vh;
 }
@@ -10,12 +16,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 1px 1px black;
+  box-shadow: 0px 0px 1px 1px #654b49;
   border-radius: 5px;
   width: 50ch;
   padding: 20px;
-  color: black;
-  background-color: #f5f5f5;
+  color: #654b49;
+  background-color: white;
 }
 
 .imgCar {
@@ -79,7 +85,7 @@
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
   background-color: #bbb;
-  color: black;
+  color: #654b49;
   width: 200px;
   height: 300px;
   object-fit: cover;
@@ -87,10 +93,16 @@
 
 /* Style the back side */
 .flip-box-back {
-  background-color: dodgerblue;
+  background-color: rgb(23, 73, 123);
   color: white;
   transform: rotateY(180deg);
   width: 200px;
   height: 300px;
   object-fit: cover;
+}
+
+.btnCadProd {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }

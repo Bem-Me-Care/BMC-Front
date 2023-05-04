@@ -59,13 +59,13 @@ function CadastroProduto() {
   //   foto:''
   // })
 
-  useEffect(()=>{
+  useEffect(() => {
     setProduto({
       ...produto,
       categoria: categoria,
       // usuario: usuario
     });
-  },[categoria])
+  }, [categoria])
 
   function updateProduto(event: ChangeEvent<HTMLInputElement>) {
     setProduto({
@@ -182,135 +182,138 @@ function CadastroProduto() {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} className="nomeProduto">
-            <Typography
-              variant="h3"
-              component="h1"
-              align="center"
-              className="textoCP"
-            >
-              {produto.id !== 0 ? "Editar produto" : "Cadastrar produto"}
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <form
-              onSubmit={onSubmit}
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <Box className="formCadastro">
-                <TextField
-                  value={produto.nome}
-                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                    updateProduto(event)
-                  }
-                  id="nome"
-                  label="Nome"
-                  variant="outlined"
-                  name="nome"
-                  margin="normal"
-                  fullWidth
-                />
-                <TextField
-                  value={produto.descricao}
-                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                    updateProduto(event)
-                  }
-                  id="descricao"
-                  label="Descricao"
-                  name="descricao"
-                  variant="outlined"
-                  margin="normal"
-                  multiline
-                  minRows={4}
-                  fullWidth
-                />
-                <TextField
-                  value={produto.img}
-                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                    updateProduto(event)
-                  }
-                  id="img"
-                  label="img"
-                  name="img"
-                  variant="outlined"
-                  margin="normal"
-                  fullWidth
-                />
-                <Box display={"flex"} alignItems={"center"}>
-                  R$
-                  <InputMask
-                    mask={"99" + "." + "99"}
-                    value={produto.preco}
-                    name="preco"
-                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      updateProduto(e)
+      <div className="fundoCadProd">
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} className="nomeProduto">
+              <Typography
+                variant="h3"
+                component="h1"
+                align="center"
+                className="textoCP"
+              >
+                {produto.id !== 0 ? "Editar produto" : "Cadastrar produto"}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <form
+                onSubmit={onSubmit}
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                <Box className="formCadastro">
+                  <TextField
+                    value={produto.nome}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                      updateProduto(event)
                     }
-                    type="text"
-                    alwaysShowMask
+                    id="nome"
+                    label="Nome"
+                    variant="outlined"
+                    name="nome"
+                    margin="normal"
+                    fullWidth
                   />
-                </Box>
-
-                {/* SELETOR DE CATEGORIA */}
-                <FormControl
-                  variant="outlined"
-                  margin="normal"
-                  className="formularioCategoria"
-                >
-                  <InputLabel id="demo-simple-select-helper-label">
-                    Categoria
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                    onChange={(event) =>
-                      getById(
-                        `/categoria/${event.target.value}`,
-                        setCategoria,
-                        {
-                          headers: {
-                            Authorization: token,
-                          },
-                        }
-                      )
+                  <TextField
+                    value={produto.descricao}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                      updateProduto(event)
                     }
+                    id="descricao"
+                    label="Descricao"
+                    name="descricao"
+                    variant="outlined"
+                    margin="normal"
+                    multiline
+                    minRows={4}
+                    fullWidth
+                  />
+                  <TextField
+                    value={produto.img}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                      updateProduto(event)
+                    }
+                    id="img"
+                    label="img"
+                    name="img"
+                    variant="outlined"
+                    margin="normal"
+                    fullWidth
+                  />
+                  <Box display={"flex"} alignItems={"center"}>
+                    R$
+                    <InputMask
+                      mask={"99" + "." + "99"}
+                      value={produto.preco}
+                      name="preco"
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        updateProduto(e)
+                      }
+                      type="text"
+                      alwaysShowMask
+                    />
+                  </Box>
+
+                  {/* SELETOR DE CATEGORIA */}
+                  <FormControl
+                    variant="outlined"
+                    margin="normal"
+                    className="formularioCategoria"
                   >
-                    {categorias.map((categoria) => (
-                      <MenuItem value={categoria.id}>
-                        {categoria.tipo} {categoria.fluxo} {categoria.cor}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+                    <InputLabel id="demo-simple-select-helper-label">
+                      Categoria
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-helper-label"
+                      id="demo-simple-select-helper"
+                      onChange={(event) =>
+                        getById(
+                          `/categoria/${event.target.value}`,
+                          setCategoria,
+                          {
+                            headers: {
+                              Authorization: token,
+                            },
+                          }
+                        )
+                      }
+                    >
+                      {categorias.map((categoria) => (
+                        <MenuItem value={categoria.id}>
+                          {categoria.tipo} {categoria.fluxo} {categoria.cor}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                  <div className="btnCadProd">
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      color="primary"
+                      size="large"
+                      disabled={categoria.id === 0}
+                      onClick={() => {
+                        (event: ChangeEvent<HTMLInputElement>) =>
+                          updateProduto(event);
+                      }}
+                    >
+                      {produto.id !== 0 ? "Editar" : "Cadastrar"}
+                    </Button>
 
-                <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  disabled={categoria.id === 0}
-                  onClick={() => {
-                    (event: ChangeEvent<HTMLInputElement>) =>
-                      updateProduto(event);
-                  }}
-                >
-                  {produto.id !== 0 ? "Editar" : "Cadastrar"}
-                </Button>
-
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  size="large"
-                  onClick={() => history("/produtos")}
-                >
-                  Cancelar
-                </Button>
-              </Box>
-            </form>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      size="large"
+                      onClick={() => history("/produtos")}
+                    >
+                      Cancelar
+                    </Button>
+                  </div>
+                </Box>
+              </form>
+            </Grid>
           </Grid>
-        </Grid>
-      </Box>
+        </Box>
+      </div>
     </>
   );
 }
