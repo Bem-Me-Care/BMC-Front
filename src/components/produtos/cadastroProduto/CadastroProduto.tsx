@@ -276,9 +276,9 @@ function CadastroProduto() {
                       )
                     }
                   >
-                    {categorias.map((categoria) => (
-                      <MenuItem value={categoria.id}>
-                        {categoria.tipo} {categoria.fluxo} {categoria.cor}
+                    {categorias.map((categorias) => (
+                      <MenuItem value={categorias.id}>
+                        {categorias.tipo} {categorias.cor} {categorias.fluxo} 
                       </MenuItem>
                     ))}
                   </Select>
