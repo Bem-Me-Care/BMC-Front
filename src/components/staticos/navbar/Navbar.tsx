@@ -55,7 +55,7 @@ function ResponsiveAppBar() {
   function goLogout() {
     dispatch(addToken(""));
     toast.info("Usuário deslogado");
-    setUsuario
+    setUsuario;
   }
 
   console.log(log);
@@ -146,13 +146,23 @@ function ResponsiveAppBar() {
                 alignContent: "center",
                 alignItems: "center",
                 justifyItems: "center",
+                marginRight: '3vw'
               }}
             >
               {token !== "" ? (
                 <Tooltip title={""}>
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar alt="Perfil" src={usuario.foto} />
-                  </IconButton>
+                  <>
+                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0}}>
+                      <Avatar
+                        alt="Perfil"
+                        src={usuario.foto}
+                        style={{
+                          width: "45px",
+                          height: "45px",
+                        }}
+                      />
+                    </IconButton>
+                  </>
                 </Tooltip>
               ) : (
                 <Box
