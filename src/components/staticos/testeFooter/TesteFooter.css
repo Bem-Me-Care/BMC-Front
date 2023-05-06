@@ -55,6 +55,7 @@
   .txtQrcode a {
     color: #654b49 !important;
     font-weight:bolder !important;
+    cursor: pointer;
   }
   
   .ImgQrcode {
