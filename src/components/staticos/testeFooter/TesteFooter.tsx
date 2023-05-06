@@ -79,7 +79,7 @@ function TesteFooter() {
                 {/* COMEÇO DAS REDES SOCIAIS NO FOOTER */}
                 <Grid item xs={10} sm={3} >
                     <Box marginY={3}>
-                    <Box display="flex" justifyContent="center">
+                        <Box display="flex" justifyContent="center">
                             <Typography
                                 variant="body1"
                                 gutterBottom
@@ -87,10 +87,10 @@ function TesteFooter() {
                             >
                                 Entre em Contato:
                             </Typography>
-                           
+
                         </Box>
-                         {/* ALINHANDO ICONE COM NOME DO INSTAGRAM */}
-                    <Box display='flex' justifyContent='center' className='icon-f'>
+                        {/* ALINHANDO ICONE COM NOME DO INSTAGRAM */}
+                        <Box display='flex' justifyContent='center' className='icon-f'>
                             <Box>
                                 <InstagramIcon
                                     onClick={() =>
@@ -103,20 +103,20 @@ function TesteFooter() {
                                 />
                             </Box>
                             <Box>
-                            <Typography
-                                onClick={() =>
-                                    window.open(
-                                        'https://www.instagram.com/carebemme/',
-                                        '_blank'
-                                    )
-                                }
-                                style={{ cursor: 'pointer' }}
-                            >
-                                Instagram
-                            </Typography>  
+                                <Typography
+                                    onClick={() =>
+                                        window.open(
+                                            'https://www.instagram.com/carebemme/',
+                                            '_blank'
+                                        )
+                                    }
+                                    style={{ cursor: 'pointer' }}
+                                >
+                                    Instagram
+                                </Typography>
                             </Box>
-                            
-                            
+
+
                         </Box>
                         {/* ESTA BOX ALINHA O ICONE DO GITHUB */}
                         <Box display='flex' justifyContent='center' className='icon-f m0'>
@@ -140,11 +140,11 @@ function TesteFooter() {
                             >
                                 GitHub
                             </Typography></Box>
-                            
+
                         </Box>
-                        
+
                         <Box display='flex' justifyContent='center' className='icon-f m0'>
-                        <Box><EmailIcon
+                            <Box><EmailIcon
                                 onClick={() =>
                                     window.open(
                                         'https://github.com/Bem-Me-Care',
@@ -154,7 +154,7 @@ function TesteFooter() {
                                 style={{ cursor: 'pointer' }}
                             /></Box>
                             <Box><Typography
-                                
+
                                 onClick={() =>
                                     window.open(
                                         'https://github.com/Bem-Me-Care',
@@ -167,13 +167,30 @@ function TesteFooter() {
                             </Typography></Box>
                         </Box>
 
-                       
+
                     </Box>
                 </Grid>
 
                 {/* FIM DAS REDES SOCIAIS NO FOOTER */}
                 {/* COMEÇO DA LOCALIZAÇÃO NO FOOTER*/}
-                <Grid item xs={10} sm={3}>
+
+                <Grid item xs={10} sm={3} className="txtQrcode">
+                    <Typography >
+                        Entre em contato com os nossos desenvolvedores clicando  <a
+                            onClick={() =>
+                                window.open(
+                                    "https://linktr.ee/bem.mecare",
+                                    "_blank"
+                                )
+                            }
+                        > AQUI</a> ou leia o QR Code.
+                    </Typography>
+                    <Box display={"flex"} justifyContent={"center"}>
+                        <img className="ImgQrcode" src='https://i.imgur.com/nVhLtfA.png' alt='' />
+                    </Box>
+                </Grid>
+
+                {/* <Grid item xs={10} sm={3}>
                     <Box marginY={3} display='flex' justifyContent='center' flexDirection='column' gap={5}>
                         <Box >
                         <Typography
@@ -194,7 +211,7 @@ function TesteFooter() {
                         </Typography>
                         </Box>
                     </Box>
-                </Grid>
+                </Grid> */}
                 {/* FIM DA LOCALIZAÇÃO NO FOOTER */}
             </Grid>
         </div>

@@ -8,20 +8,14 @@
     --color-Black: #000000;
 }
 
-
-
 .bkf{
     background-color: var(--color-Pink) !important;
 }
-
-
-
 
 .imgPP{
     /* margin-top: 15vh; */
     margin-left: 1vh ;
 }
-
 
 .p0{
     /* margin-right: 2% !important; */
@@ -39,15 +33,31 @@
     margin-left: 3px;
 }
 
-
 .icon-f{
     margin-top: 1vh;
     color: var(--color-Yellow);
+    margin: 1rem;
+    padding-right: 1rem;
 }
-
-
-
 
 .m0{
     margin-right: 25px;
 }
+
+.txtQrcode {
+    font-size: 24px !important;
+    font-weight:bolder !important;
+    color: var(--color-Yellow);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .txtQrcode a {
+    color: #654b49 !important;
+    font-weight:bolder !important;
+  }
+  
+  .ImgQrcode {
+    width: 40%;
+    padding: 1rem;
+  }
