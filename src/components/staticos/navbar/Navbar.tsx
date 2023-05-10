@@ -113,7 +113,7 @@ function ResponsiveAppBar() {
             }}
           >
             <img
-              src={"https://avatars.githubusercontent.com/u/129092790?s=96&v=4"}
+              src={"https://i.imgur.com/svpW1kh.png"}
               alt="Logo da marca BMC"
               style={{ width: "70px", padding: "10px", marginLeft: '2px' }}
             />
